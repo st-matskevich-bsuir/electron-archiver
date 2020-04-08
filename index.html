@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div id="topbar">
+      <div class="title">Electron Archiver</div>
+      <div id="exit_button"></div>
+    </div>
+
+    <div id="content">
+      <div id="controls_wrapper">
+        <div class="toggle-container" id="mode_toggle" tabindex="0">
+          <div class="toggle-background">
+            <div class="toggle">
+              <p>Compress</p>
+            </div>
+            <div class="toggle">
+              <p>Decompress</p>
+            </div>
+          </div>
+          <div class="toggle-foreground off">
+            <div class="toggle">
+              <p>Compress</p>
+            </div>
+            <div class="toggle">
+              <p>Decompress</p>
+            </div>
+          </div>
+        </div>
+
+        <input id="selected_file" type="file" hidden>
+        <div id="file_container" tabindex="0">
+          <div id="file_background"></div>
+          <div class="title">Drop file here or click for selection</div>
+        </div>
+  
+        <div class="button disabled" id="process_button" tabindex="0">
+          <p>No file selected</p>
+        </div>
+      </div>
+
+      <div id="result_wrapper" style="display: none">
+        <div id="result_icon"></div>
+        <div class="title">Message</div>
+        <div class="button" id="result_button" tabindex="0">
+          <p>OK</p>
+        </div>
+      </div>
+
+      <div class="preloader" id="preloader" style="display: none"></div>
+    </div>
+
+    <script src="./dist/renderer.js"></script>
+  </body>
+</html>

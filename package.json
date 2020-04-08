@@ -1,0 +1,40 @@
+{
+  "name": "electron_archiver",
+  "version": "1.0.0",
+  "description": "Electron archiver application",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "webpack && electron .",
+    "build-lib": "node-gyp rebuild --target=6.1.5 --arch=x64 --dist-url=https://electronjs.org/headers",
+    "build-lib:dev": "node-gyp rebuild --debug --target=6.1.5 --arch=x64 --dist-url=https://electronjs.org/headers",
+    "postinstall": "electron-builder install-app-deps",
+    "generate-icon": "electron-icon-builder --input=./icons/icon-template.png --output=./dist --flatten",
+    "electron-pack": "webpack && electron-builder build --dir",
+    "electron-dist": "webpack && electron-builder build"
+  },
+  "build": {
+    "appId": "com.matskevich.archiver",
+    "win": {
+      "target": "portable",
+      "icon": "dist/icons"
+    },
+    "directories": {
+      "output": "output"
+    }
+  },
+  "author": "st.matskevich",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.5",
+    "electron": "^6.1.5",
+    "electron-builder": "^21.2.0",
+    "electron-icon-builder": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "nan": "^2.14.0"
+  }
+}
