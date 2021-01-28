@@ -27,7 +27,7 @@
   "license": "ISC",
   "devDependencies": {
     "copy-webpack-plugin": "^5.0.5",
-    "electron": "^6.1.5",
+    "electron": "^9.4.0",
     "electron-builder": "^21.2.0",
     "electron-icon-builder": "^1.0.1",
     "webpack": "^4.41.2",
