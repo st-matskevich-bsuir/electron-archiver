@@ -31,7 +31,7 @@
     "electron-builder": "^21.2.0",
     "electron-icon-builder": "^1.0.1",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "jquery": "^3.4.1",
